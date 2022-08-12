@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="./style.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css
+    ">
 </head>
 
 <body>
@@ -14,13 +18,15 @@
         <div class="main-content">
             <div class="input_field">
                 <input id="take_input" placeholder="Write a task" />
-                <button id="add_btn" onclick="addItems()">V</button>
+                <button id="add_btn" class="input_button" onclick="addItems()">^</button>
+                <button id="edit_btn" class="input_button" onclick="addEditedItem()"><i
+                        class="fa-solid fa-pen-to-square"></i></button>
             </div>
 
             <div id="ul_content">
-                <ul id="unordered_list">
+                <ol id="unordered_list">
 
-                </ul>
+                </ol>
             </div>
         </div>
     </div>
