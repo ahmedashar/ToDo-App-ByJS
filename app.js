@@ -14,20 +14,26 @@ function addItems() {
     var li = document.createElement('li');
     li.setAttribute('class','list_items')
     li.innerHTML = input.value;
+    
+    var br = document.createElement('br')
 
+
+    // make div element for styling btn
+    var div = document.createElement('div')
+    
     // create delete button
-    var btn1 = document.createElement('button');
-    btn1.innerHTML = 'Delete';
+    var btn1 = document.createElement('i');
+    btn1.setAttribute('class', 'fa-regular fa-trash-can deleteIcon')
     btn1.setAttribute('onclick', 'deleteItem(event)')
     
     // create update button
-    var btn2 = document.createElement('button');
-    btn2.innerHTML = 'Edit';
+    var btn2 = document.createElement('i');
+    btn2.setAttribute('class', 'fa-solid fa-pen-to-square editIcon')
     btn2.setAttribute('onclick', 'updateItem(event)')
     
     
     ul.appendChild(li);
-    
+    li.appendChild(br);
     li.appendChild(btn1);
     li.appendChild(btn2);
     

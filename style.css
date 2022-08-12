@@ -1,25 +1,41 @@
+body {
+  background: rgb(195, 34, 34);
+  background: linear-gradient(
+    248deg,
+    rgba(195, 34, 34, 1) 39%,
+    rgba(253, 205, 45, 1) 100%
+  );
+  height: 98vh;
+}
 .container {
   color: white;
-  border: 2px solid black;
-
+  /* border: 2px solid black; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: flex;
   justify-content: center;
   /* flex-direction: column;
     align-items: center; */
 }
 .main-content {
+  border-radius: 10px;
   background-color: #1e1a3b;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-  height: 600px;
-  border: 2px solid green;
+  width: 400px;
+  height: 700px;
+  /* border: 2px solid green; */
   position: relative;
 }
+#title {
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 .input_field {
-  width: 320px;
-  height: 40px;
+  width: 350px;
+  height: 50px;
   padding: 2px;
   border: 2px solid #c9c4de;
   border-radius: 8px;
@@ -28,7 +44,7 @@
   background-color: #3e3363;
 
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
 }
 #take_input {
   background-color: #3e3363;
@@ -45,7 +61,7 @@
 }
 .input_button {
   /* margin: ; */
-  margin-top: 4px;
+  margin-top: 9px;
   margin-right: 2px;
   width: 38px;
   height: 30px;
@@ -55,7 +71,8 @@
 }
 #add_btn {
   padding-top: 6px;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 900;
 }
 #edit_btn {
   display: none;
@@ -64,9 +81,10 @@
 /* list section */
 #ul_content {
   /* border: 2px solid blue; */
-  margin-top: 20px;
-  width: 320px;
-  height: 480px;
+  margin-top: 35px;
+  width: 350px;
+
+  height: 550px;
   overflow-y: scroll;
 }
 #ul_content::-webkit-scrollbar {
@@ -89,11 +107,27 @@
 }
 .list_items {
   border-radius: 6px;
-  min-height: 40px;
+  padding: 8px;
+  /* min-height: 10px; */
+
+  padding-bottom: 40px;
+
   overflow-wrap: break-word;
   font-size: 18px;
-  padding: 8px;
   margin-left: -40px;
   background-color: #3b305f;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.deleteIcon {
+  position: absolute;
+  right: 0px;
+  bottom: 6px;
+  margin-right: 40px;
+}
+.editIcon {
+  position: absolute;
+  right: 0px;
+  bottom: 6px;
+  margin-right: 12px;
 }
