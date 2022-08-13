@@ -67,13 +67,15 @@ function deleteItem(event) {
 
 function updateItem(event){
     var input = document.getElementById('take_input');
-
+    
     // get the text of li 
     var firstChildNode = event.target.parentElement.firstChild.nodeValue;
 
-    // currentUpdateItem is a globle viriable, assign li to it.
+    // currentUpdateItem is a globle variable, assign li to it.
     currentUpdateItem = event.target.parentElement;
-    
+
+    currentUpdateItem.style.border = '2px solid #DC799F'
+    document.getElementsByClassName('input_field')[0].style.borderColor = '#DC799F'
     input.value = firstChildNode;
     
     // get buttons of inputField (for toggle purpose)
@@ -88,11 +90,14 @@ function updateItem(event){
 }
 
 
+// input field edit button
 
 function addEditedItem(){
-
-       var input = document.getElementById('take_input');
        
+
+    document.getElementsByClassName('input_field')[0].style.borderColor = 'white'
+       var input = document.getElementById('take_input');
+       currentUpdateItem.style.border = 'none';
        currentUpdateItem.firstChild.nodeValue = input.value
 
        // get buttons of inputField

@@ -2,8 +2,9 @@ body {
   background: rgb(195, 34, 34);
   background: linear-gradient(
     248deg,
-    rgba(195, 34, 34, 1) 39%,
-    rgba(253, 205, 45, 1) 100%
+    rgb(213, 82, 42) 10%,
+    rgb(221, 128, 181) 70%,
+    rgb(250, 230, 163) 100%
   );
   height: 98vh;
 }
@@ -11,10 +12,9 @@ body {
   color: white;
   /* border: 2px solid black; */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.8px;
   display: flex;
   justify-content: center;
-  /* flex-direction: column;
-    align-items: center; */
 }
 .main-content {
   border-radius: 10px;
@@ -28,9 +28,9 @@ body {
   position: relative;
 }
 #title {
-  position: absolute;
-  left: 0;
   margin-left: 20px;
+  margin-top: 15px;
+  align-self: flex-start;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .input_field {
@@ -60,7 +60,6 @@ body {
   outline: none;
 }
 .input_button {
-  /* margin: ; */
   margin-top: 9px;
   margin-right: 2px;
   width: 38px;
@@ -70,6 +69,7 @@ body {
   font-size: 16px;
 }
 #add_btn {
+  color: #1e1a3b;
   padding-top: 6px;
   font-size: 20px;
   font-weight: 900;
@@ -81,10 +81,11 @@ body {
 /* list section */
 #ul_content {
   /* border: 2px solid blue; */
-  margin-top: 35px;
-  width: 350px;
+  margin-top: -15px;
+  width: 360px;
+  margin-left: 10px;
 
-  height: 550px;
+  height: 570px;
   overflow-y: scroll;
 }
 #ul_content::-webkit-scrollbar {
@@ -130,4 +131,49 @@ body {
   right: 0px;
   bottom: 6px;
   margin-right: 12px;
+}
+
+#creator {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #1e1a3b;
+  letter-spacing: 0.6px;
+  font-family: "Russo One", sans-serif;
+}
+
+/* for resposiveness */
+
+@media (max-width: 450px) {
+  body {
+    background-color: #1e1a3b;
+    background-image: none;
+  }
+  .main-content {
+    border-radius: 0px;
+    background-color: #1e1a3b;
+    width: 100% !important;
+    height: 90vh;
+    /* border: 2px solid green; */
+  }
+  #title {
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    align-self: center;
+  }
+  #creator {
+    color: white;
+  }
+}
+@media (max-width: 390px) {
+  .input_field {
+    width: 300px;
+  }
+  #ul_content {
+    /* border: 2px solid blue; */
+
+    width: 320px;
+  }
 }
